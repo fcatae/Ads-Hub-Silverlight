@@ -44,8 +44,6 @@ namespace AppAdsHubSilverlight
         private void inmob1_OnAdRequestFailed(object sender, InMobi.WP.AdSDK.IMAdViewErrorEventArgs e)
         {
             Debug.WriteLine(e.ErrorDescription);
-
-
         }
 
     }

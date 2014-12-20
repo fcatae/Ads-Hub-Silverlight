@@ -20,10 +20,14 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
+    <phone:PhoneApplicationPage.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="10"/>
+        </Style>
+    </phone:PhoneApplicationPage.Resources>
+    
     <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Background="DarkGreen">
         <StackPanel>
-            <TextBlock Text="Hub"/>
-            
             <TextBlock Text="PubCenter"/>
             <UI:AdControl ApplicationId="test_client" AdUnitId="Image480_80" Height="80" Width="480" ErrorOccurred="AdControl_ErrorOccurred" />
 
@@ -57,7 +61,7 @@
            
 
             <!-- BUG: when changing the control, needs to save all files -->
-            <TextBlock Text="AdMediator"/>
+            <TextBlock FontSize="16" Text="AdMediator" HorizontalAlignment="Center"/>
             <WindowsPhone8:AdMediatorControl x:Name="AdMediatorCtrl1" HorizontalAlignment="Left" Id="AdMediator-Id-5614A183-40C0-4B8E-96FB-AE1E8643FE94" VerticalAlignment="Top" Width="480" Height="80"
                                              AdMediatorError="AdMediatorCtrl1_AdMediatorError"
                                              AdSdkError="AdMediatorCtrl1_AdSdkError"
