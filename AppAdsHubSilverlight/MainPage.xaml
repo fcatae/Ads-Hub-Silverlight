@@ -30,10 +30,13 @@
             <!-- https://developers.google.com/mobile-ads-sdk/docs/admob/wp/quick-start -->
             <TextBlock Text="AdMob"/>
             <google:AdView AdUnitID="ca-app-pub-2322415017323872/2734944143" Format="Banner"/>
-            
-            <!-- -->
+            <!-- BUG: Mediation: needs to adjust the .config file and add the testConfiguration -->
+
+            <!-- download SDK: pdf manual -->
+            <TextBlock Text="Smaato"/>
             <soma:SomaAdViewer Name="soma1" Adspace="0" Pub="0"/>
             
+            <!-- BUG: when changing the control, needs to save all files -->
             <TextBlock Text="AdMediator"/>
             <WindowsPhone8:AdMediatorControl x:Name="AdMediatorCtrl1" HorizontalAlignment="Left" Id="AdMediator-Id-5614A183-40C0-4B8E-96FB-AE1E8643FE94" VerticalAlignment="Top" Width="480" Height="80"
                                              AdMediatorError="AdMediatorCtrl1_AdMediatorError"
