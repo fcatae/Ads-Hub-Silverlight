@@ -21,7 +21,7 @@ namespace AppAdsHubSilverlight
 
             soma1.StartAds();
             
-            //inmob1.LoadNewAd();
+            inmob1.LoadNewAd();
             // inmob: set up the test device
             // InMobi.WP.AdSDK.SDKUtility.LogLevel = InMobi.WP.AdSDK.LogLevels.IMLogLevelDebug;
         }

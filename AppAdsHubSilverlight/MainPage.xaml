@@ -11,6 +11,7 @@
     xmlns:soma="clr-namespace:SOMAWP8;assembly=SOMAWP8"
     xmlns:inner="clr-namespace:Inneractive.Ad;assembly=Inneractive.Ad"
     xmlns:inmob="clr-namespace:InMobi.WP.AdSDK;assembly=InMobiWPAdSDK"
+    xmlns:mob="clr-namespace:MobFox.Ads;assembly=MobFox.Ads"    
     x:Class="AppAdsHubSilverlight.MainPage"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
@@ -50,9 +51,11 @@
                     <inmob:IMAdRequest LocationInquiryAllowed="False"></inmob:IMAdRequest>
                 </inmob:IMAdView.IMAdRequest>
             </inmob:IMAdView>
-            
-            
-            
+
+            <TextBlock Text="mobFox"/>
+            <mob:AdControl PublisherID="627396d59dead2d65fd9c2b28490bc68" TestMode="True" VerticalAlignment="Bottom" />
+           
+
             <!-- BUG: when changing the control, needs to save all files -->
             <TextBlock Text="AdMediator"/>
             <WindowsPhone8:AdMediatorControl x:Name="AdMediatorCtrl1" HorizontalAlignment="Left" Id="AdMediator-Id-5614A183-40C0-4B8E-96FB-AE1E8643FE94" VerticalAlignment="Top" Width="480" Height="80"
