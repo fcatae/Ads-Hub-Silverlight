@@ -9,6 +9,7 @@
     xmlns:adduplex="clr-namespace:AdDuplex;assembly=AdDuplex.WindowsPhone"
     xmlns:google="clr-namespace:GoogleAds;assembly=GoogleAds"
     xmlns:soma="clr-namespace:SOMAWP8;assembly=SOMAWP8"
+    xmlns:inner="clr-namespace:Inneractive.Ad;assembly=Inneractive.Ad"
     x:Class="AppAdsHubSilverlight.MainPage"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
@@ -35,7 +36,11 @@
             <!-- download SDK: pdf manual -->
             <TextBlock Text="Smaato"/>
             <soma:SomaAdViewer Name="soma1" Adspace="0" Pub="0"/>
-            
+
+            <!-- https://inneractive.jira.com/wiki/display/DevWiki/Windows+Phone+SDK+guidelines -->
+            <TextBlock Text="Inneractive"/>
+            <inner:InneractiveAd AppID="0" AdType="IaAdType_Banner" ReloadTime="60" Name="InneractiveXamlAd" />
+
             <!-- BUG: when changing the control, needs to save all files -->
             <TextBlock Text="AdMediator"/>
             <WindowsPhone8:AdMediatorControl x:Name="AdMediatorCtrl1" HorizontalAlignment="Left" Id="AdMediator-Id-5614A183-40C0-4B8E-96FB-AE1E8643FE94" VerticalAlignment="Top" Width="480" Height="80"
