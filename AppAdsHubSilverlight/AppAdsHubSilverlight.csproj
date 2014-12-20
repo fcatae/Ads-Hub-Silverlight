@@ -202,6 +202,12 @@
       <HintPath>..\packages\Microsoft.Advertising.WindowsPhone.SL80.6.2.40501.1\lib\wp8\Microsoft.Advertising.Mobile.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Controls.Maps, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="MobFox.Ads">
+      <HintPath>Libs\mobfox\MobFox.Ads.dll</HintPath>
+    </Reference>
+    <Reference Include="MobFox.Ads.LocationAware">
+      <HintPath>Libs\mobfox\MobFox.Ads.LocationAware.dll</HintPath>
+    </Reference>
     <Reference Include="SOMAWP8">
       <HintPath>..\packages\SOMAW81_Package.1.1.6\lib\wp8\SOMAWP8.dll</HintPath>
     </Reference>

@@ -42,13 +42,16 @@
             <TextBlock Text="Inneractive"/>
             <inner:InneractiveAd AppID="0" AdType="IaAdType_Banner" ReloadTime="60" Name="InneractiveXamlAd" />
 
+            <!-- https://www.inmobi.com/support/integration/24114182/22051163/windows-sdk-integration-guides/ -->
             <TextBlock Text="Inmob"/>
-            <inmob:IMAdView Name="inmob1" AppId="90c99f06146f48189b8303bcc2db4a2b" 
-                            RefreshInterval="30" AdSize="14" Height="50" Width="320" AnimationType="SLIDE_IN_LEFT" OnAdRequestFailed="inmob1_OnAdRequestFailed">
+            <inmob:IMAdView Name="inmob1" AppId="90c99f06146f48189b8303bcc2db4a2b"            
+                            RefreshInterval="20" AdSize="15" Height="50" Width="320" AnimationType="SLIDE_IN_LEFT" OnAdRequestFailed="inmob1_OnAdRequestFailed">
                 <inmob:IMAdView.IMAdRequest>
                     <inmob:IMAdRequest LocationInquiryAllowed="False"></inmob:IMAdRequest>
                 </inmob:IMAdView.IMAdRequest>
             </inmob:IMAdView>
+            
+            
             
             <!-- BUG: when changing the control, needs to save all files -->
             <TextBlock Text="AdMediator"/>
