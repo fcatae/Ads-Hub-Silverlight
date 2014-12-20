@@ -8,6 +8,7 @@
     xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" xmlns:WindowsPhone8="clr-namespace:Microsoft.AdMediator.WindowsPhone8;assembly=Microsoft.AdMediator.WindowsPhone8"
     xmlns:adduplex="clr-namespace:AdDuplex;assembly=AdDuplex.WindowsPhone"
     xmlns:google="clr-namespace:GoogleAds;assembly=GoogleAds"
+    xmlns:soma="clr-namespace:SOMAWP8;assembly=SOMAWP8"
     x:Class="AppAdsHubSilverlight.MainPage"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
@@ -30,9 +31,13 @@
             <TextBlock Text="AdMob"/>
             <google:AdView AdUnitID="ca-app-pub-2322415017323872/2734944143" Format="Banner"/>
             
+            <!-- -->
+            <soma:SomaAdViewer Name="soma1" Adspace="0" Pub="0"/>
+            
             <TextBlock Text="AdMediator"/>
-            <WindowsPhone8:AdMediatorControl x:Name="AdMediatorCtrl1" HorizontalAlignment="Left" Id="AdMediator-Id-5614A183-40C0-4B8E-96FB-AE1E8643FE94" VerticalAlignment="Top" Width="320" Height="50"
+            <WindowsPhone8:AdMediatorControl x:Name="AdMediatorCtrl1" HorizontalAlignment="Left" Id="AdMediator-Id-5614A183-40C0-4B8E-96FB-AE1E8643FE94" VerticalAlignment="Top" Width="480" Height="80"
                                              AdMediatorError="AdMediatorCtrl1_AdMediatorError"
+                                             AdSdkError="AdMediatorCtrl1_AdSdkError"
                                              />
 
         </StackPanel>

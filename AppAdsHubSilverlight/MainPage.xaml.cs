@@ -19,8 +19,7 @@ namespace AppAdsHubSilverlight
         {
             InitializeComponent();
 
-            // Sample code to localize the ApplicationBar
-            //BuildLocalizedApplicationBar();
+            soma1.StartAds();
         }
 
         private void AdControl_ErrorOccurred(object sender, Microsoft.Advertising.AdErrorEventArgs e)
@@ -29,6 +28,11 @@ namespace AppAdsHubSilverlight
         }
 
         private void AdMediatorCtrl1_AdMediatorError(object sender, Microsoft.AdMediator.Core.Events.AdMediatorFailedEventArgs e)
+        {
+            Debug.WriteLine(e.Error);
+        }
+
+        private void AdMediatorCtrl1_AdSdkError(object sender, Microsoft.AdMediator.Core.Events.AdFailedEventArgs e)
         {
             Debug.WriteLine(e.Error);
         }
