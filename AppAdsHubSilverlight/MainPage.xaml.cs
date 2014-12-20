@@ -20,6 +20,10 @@ namespace AppAdsHubSilverlight
             InitializeComponent();
 
             soma1.StartAds();
+            inmob1.LoadNewAd();
+
+            // inmob: set up the test device
+            InMobi.WP.AdSDK.SDKUtility.LogLevel = InMobi.WP.AdSDK.LogLevels.IMLogLevelDebug;
         }
 
         private void AdControl_ErrorOccurred(object sender, Microsoft.Advertising.AdErrorEventArgs e)
@@ -35,6 +39,13 @@ namespace AppAdsHubSilverlight
         private void AdMediatorCtrl1_AdSdkError(object sender, Microsoft.AdMediator.Core.Events.AdFailedEventArgs e)
         {
             Debug.WriteLine(e.Error);
+        }
+
+        private void inmob1_OnAdRequestFailed(object sender, InMobi.WP.AdSDK.IMAdViewErrorEventArgs e)
+        {
+            Debug.WriteLine(e.ErrorDescription);
+
+
         }
 
     }

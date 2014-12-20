@@ -10,6 +10,7 @@
     xmlns:google="clr-namespace:GoogleAds;assembly=GoogleAds"
     xmlns:soma="clr-namespace:SOMAWP8;assembly=SOMAWP8"
     xmlns:inner="clr-namespace:Inneractive.Ad;assembly=Inneractive.Ad"
+    xmlns:inmob="clr-namespace:InMobi.WP.AdSDK;assembly=InMobiWPAdSDK"
     x:Class="AppAdsHubSilverlight.MainPage"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
@@ -41,6 +42,14 @@
             <TextBlock Text="Inneractive"/>
             <inner:InneractiveAd AppID="0" AdType="IaAdType_Banner" ReloadTime="60" Name="InneractiveXamlAd" />
 
+            <TextBlock Text="Inmob"/>
+            <inmob:IMAdView Name="inmob1" AppId="90c99f06146f48189b8303bcc2db4a2b" 
+                            RefreshInterval="30" AdSize="14" Height="50" Width="320" AnimationType="SLIDE_IN_LEFT" OnAdRequestFailed="inmob1_OnAdRequestFailed">
+                <inmob:IMAdView.IMAdRequest>
+                    <inmob:IMAdRequest LocationInquiryAllowed="False"></inmob:IMAdRequest>
+                </inmob:IMAdView.IMAdRequest>
+            </inmob:IMAdView>
+            
             <!-- BUG: when changing the control, needs to save all files -->
             <TextBlock Text="AdMediator"/>
             <WindowsPhone8:AdMediatorControl x:Name="AdMediatorCtrl1" HorizontalAlignment="Left" Id="AdMediator-Id-5614A183-40C0-4B8E-96FB-AE1E8643FE94" VerticalAlignment="Top" Width="480" Height="80"
