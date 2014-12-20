@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" xmlns:WindowsPhone8="clr-namespace:Microsoft.AdMediator.WindowsPhone8;assembly=Microsoft.AdMediator.WindowsPhone8"
     xmlns:adduplex="clr-namespace:AdDuplex;assembly=AdDuplex.WindowsPhone"
+    xmlns:google="clr-namespace:GoogleAds;assembly=GoogleAds"
     x:Class="AppAdsHubSilverlight.MainPage"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
@@ -24,9 +25,15 @@
 
             <TextBlock Text="AdDuplex"/>
             <adduplex:AdControl x:Name="adDuplexAd" AppId="130679" IsTest="True" />
+
+            <!-- https://developers.google.com/mobile-ads-sdk/docs/admob/wp/quick-start -->
+            <TextBlock Text="AdMob"/>
+            <google:AdView AdUnitID="ca-app-pub-2322415017323872/2734944143" Format="Banner"/>
             
             <TextBlock Text="AdMediator"/>
-            <WindowsPhone8:AdMediatorControl x:Name="AdMediatorCtrl1" HorizontalAlignment="Left" Id="AdMediator-Id-5614A183-40C0-4B8E-96FB-AE1E8643FE94" VerticalAlignment="Top" Width="480" Height="80" />
+            <WindowsPhone8:AdMediatorControl x:Name="AdMediatorCtrl1" HorizontalAlignment="Left" Id="AdMediator-Id-5614A183-40C0-4B8E-96FB-AE1E8643FE94" VerticalAlignment="Top" Width="320" Height="50"
+                                             AdMediatorError="AdMediatorCtrl1_AdMediatorError"
+                                             />
 
         </StackPanel>
     </Grid>
